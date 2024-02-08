@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "BowTiedGnome",
+    "classifications": [
+        "Gnome",
+        "Library",
+        "Std"
+    ],
+    "description": "Generates a C# class library that uses a property to define target frameworks",
+    "identity": "Gnome.Std.Library",
+    "name": "Gnome Std Class Library",
+    "shortName": "gnome-std",
+    "sourceName": "Gnome.Std.Library",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    }
+}

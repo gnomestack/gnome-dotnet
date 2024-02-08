@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Core", "Core\Gnome.Core.csproj", "{6CD598F5-4D90-477B-B629-2ADBF8C19285}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Color.Primitives", "Color.Primitives\Gnome.Color.Primitives.csproj", "{347FB125-FB15-430E-A12C-4541750DFB30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Internal", "Internal\Gnome.Internal.csproj", "{82C3D98E-8AC3-44C2-8369-D4AE2E5A1EDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.CommandLine.Primivites", "Commandline.Primitives\Gnome.CommandLine.Primivites.csproj", "{BDADF343-1B99-4655-BCB8-5DE871EB76DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Sys.Process", "Sys.Process\Gnome.Sys.Process.csproj", "{6CD7E96A-9EAC-4CAB-8F73-2F53AB0DD7F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CD598F5-4D90-477B-B629-2ADBF8C19285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD598F5-4D90-477B-B629-2ADBF8C19285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD598F5-4D90-477B-B629-2ADBF8C19285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD598F5-4D90-477B-B629-2ADBF8C19285}.Release|Any CPU.Build.0 = Release|Any CPU
+		{347FB125-FB15-430E-A12C-4541750DFB30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{347FB125-FB15-430E-A12C-4541750DFB30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{347FB125-FB15-430E-A12C-4541750DFB30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{347FB125-FB15-430E-A12C-4541750DFB30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82C3D98E-8AC3-44C2-8369-D4AE2E5A1EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82C3D98E-8AC3-44C2-8369-D4AE2E5A1EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82C3D98E-8AC3-44C2-8369-D4AE2E5A1EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82C3D98E-8AC3-44C2-8369-D4AE2E5A1EDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDADF343-1B99-4655-BCB8-5DE871EB76DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDADF343-1B99-4655-BCB8-5DE871EB76DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDADF343-1B99-4655-BCB8-5DE871EB76DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDADF343-1B99-4655-BCB8-5DE871EB76DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CD7E96A-9EAC-4CAB-8F73-2F53AB0DD7F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD7E96A-9EAC-4CAB-8F73-2F53AB0DD7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD7E96A-9EAC-4CAB-8F73-2F53AB0DD7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD7E96A-9EAC-4CAB-8F73-2F53AB0DD7F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

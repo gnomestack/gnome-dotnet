@@ -1,0 +1,11 @@
+<!--suppress MsbuildTargetFrameworkTagInspection -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFx>$(CoreFx)</TargetFx>
+    <TargetFx Condition="'$(CoreFx)' == ''">net7.0</TargetFx>
+    <TargetFrameworks>$(TargetFx)</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,17 @@
+
+wd := justfile_directory()
+sln := wd + "/std.sln"
+dotnet_config := env_var_or_default("DOTNET_CONFIG", "Release")
+
+restore:
+    dotnet restore {{ sln }}
+
+core_build:
+    dotnet build {{ sln }} -c {{ dotnet_config }} --no-restore
+
+core_test:
+    dotnet test {{ sln }} -c {{ dotnet_config }} --no-build
+
+build: restore core_build
+
+test: restore core_build core_test

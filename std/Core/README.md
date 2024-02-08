@@ -1,0 +1,5 @@
+# Gnome.Core
+
+{{ description }}
+
+{{ license }}

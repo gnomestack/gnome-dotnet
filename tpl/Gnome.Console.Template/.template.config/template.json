@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "BowTiedGnome",
+    "classifications": [
+        "Gnome",
+        "Console"
+    ],
+    "description": "Generates a C# console project that uses a property to define target frameworks",
+    "identity": "Gnome.Console",
+    "name": "Gnome Console",
+    "shortName": "gs-console",
+    "sourceName": "Gnome.Console",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    }
+}
