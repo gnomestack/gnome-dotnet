@@ -374,6 +374,7 @@ dotnet_naming_style.s_camelcase.capitalization = camel_case
 dotnet_code_quality.enable_platform_analyzer_on_pre_net5_target = true
 
 # analyzer rules
+dotnet_diagnostic.IDE0023.severity = none # allow variable name to be the same as the field. coding style uses `this` to differentiate.
 dotnet_diagnostic.IDE0045.severity = none # if statement can be simplified should be ignored
 dotnet_diagnostic.IDE0057.severity = none # substring can be simplified is invalide for .NET STANDARD
 
@@ -402,3 +403,4 @@ dotnet_diagnostic.S1135.severity = none # a analyzer should not create a warning
 dotnet_diagnostic.S1172.severity = none # remove this parameter whose value is ignored... giving false positive
 dotnet_diagnostic.S3267.severity = none # LINQ for all loops is overkill.
 dotnet_diagnostic.S3925.severity = none # overide serialization is giving false positive.
+dotnet_diagnostic.S4035.severity = none # Not using equality comparer or sealing.
