@@ -32,6 +32,9 @@ public class Result<TValue> : IResult<TValue, Error>
     public static implicit operator Result<TValue>(Error error)
         => new(error);
 
+    public static implicit operator Result<TValue>(Exception exception)
+        => new(Error.Convert(exception));
+
     public static implicit operator Result<TValue>(TValue value)
         => new(value);
 

@@ -2,8 +2,14 @@ using System.Collections;
 
 namespace Gnome.Sys;
 
-public class EnvVariables : IEnumerable<KeyValuePair<string, string>>
+public class EnvVariables : IEnvVariables
 {
+    public Option<string> this[string name]
+    {
+        get => this.Get(name);
+        set => this.Set(name, value);
+    }
+
     public Option<string> Get(string name)
         => Option.From(System.Environment.GetEnvironmentVariable(name));
 

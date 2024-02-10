@@ -385,6 +385,7 @@ dotnet_diagnostic.SA1311.severity = none # staic readonly fields should begin s_
 dotnet_diagnostic.SA1314.severity = none # prefer rust style generic type arg names
 dotnet_diagnostic.SA1402.severity = none # allow multiple types per file.
 dotnet_diagnostic.SA1404.severity = none # suppression justification is not required
+dotnet_diagnostic.SA1405.severity = none # allow debug assert without message due to import of MS code
 dotnet_diagnostic.SA1503.severity = none # braces are not preferred for brevity
 dotnet_diagnostic.SA1414.severity = none # tuple names are overrated.
 dotnet_diagnostic.SA1505.severity = none # braces are not required for single-line statements

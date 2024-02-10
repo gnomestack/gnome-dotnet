@@ -4,7 +4,7 @@ using static Gnome.Sys.OS;
 
 namespace Gnome.Sys;
 
-public class EnvPaths : IEnumerable<string>
+public class EnvPaths : IEnvPaths
 {
     private readonly EnvVariables env;
 
@@ -39,7 +39,7 @@ public class EnvPaths : IEnumerable<string>
 #endif
     }
 
-    public EnvPaths Append(string path)
+    public IEnvPaths Append(string path)
     {
         var pathValue = this.env.Get(this.pathName);
         var paths = Split(pathValue.GetValueOrDefault(string.Empty));
@@ -53,7 +53,7 @@ public class EnvPaths : IEnumerable<string>
         return this;
     }
 
-    public EnvPaths Prepend(string path)
+    public IEnvPaths Prepend(string path)
     {
         var pathValue = this.env.Get(this.pathName);
         var paths = Split(pathValue.GetValueOrDefault(string.Empty));
@@ -68,18 +68,18 @@ public class EnvPaths : IEnumerable<string>
         return this;
     }
 
-    public EnvPaths Remove(string path)
+    public bool Remove(string path)
     {
         var pathValue = this.env.Get(this.pathName);
         var paths = Split(pathValue.GetValueOrDefault(string.Empty));
         if (!Has(paths, path))
-            return this;
+            return false;
 
         var list = new List<string>(paths);
         list.Remove(path);
 
         this.env.Set(this.pathName, Join(list));
-        return this;
+        return true;
     }
 
     public bool Has(string path)

@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <RootNamespace>Gnome</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -25,8 +26,24 @@
     <None Condition="Exists('$(IconPath)')" Include="$(IconPath)" Pack="true" PackagePath="\" />
   </ItemGroup>
 
+  <ItemGroup Condition="'$(NetLegacy)' == 'true'">
+    <PackageReference Include="Polyfill" />
+  </ItemGroup>
+
   <ItemGroup>
-   <PackageReference Include="Polyfill" />
+    <ProjectReference Include="..\Core\*.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="$(InternalDir)/Interop/Unix/Libraries.cs" Link="Interop/Unix/Libraries.cs" />
+    <Compile Include="$(InternalDir)/Interop/Unix/Errors.cs" Link="Interop/Unix/Errors.cs" />
+    <Compile Include="$(InternalDir)/Interop/Unix/System.Native/ChMod.cs" Link="Interop/Unix/System.Native/ChMod.cs" />
+    <Compile Include="$(InternalDir)/Interop/Unix/System.Native/ChOwn.cs" Link="Interop/Unix/System.Native/ChOwn.cs" />
+    <Compile Include="$(InternalDir)/Interop/Unix/System.Native/GetEUid.cs" Link="Interop/Unix/System.Native/GetEUid.cs" />
+    <Compile Include="$(InternalDir)/Interop/Unix/System.Native/Stat.cs" Link="Interop/Unix/System.Native/Stat.cs" />
+   
+    <Compile Include="$(InternalDir)/Interop/Unix/System.Native/LChflags.cs" Link="Interop/Unix/System.Native/LChflags.cs" />
+    <Compile Include="$(InternalDir)/Interop/Unix/System.Native/IsMemberOfGroup.cs" Link="Interop/Unix/System.Native/IsMemberOfGroup.cs" />
   </ItemGroup>
 
 </Project>

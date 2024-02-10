@@ -61,7 +61,7 @@
     <MacOs>false</MacOs>
     <RootDir>$(MSBuildThisFileDirectory.TrimEnd("/"))</RootDir>
     <SrcDir>$(RootDir)/src</SrcDir>
-    <InternalDir>$(MSBuildThisFileDirectory)src/Internal</InternalDir>
+    <InternalDir>$(MSBuildThisFileDirectory)std/Internal</InternalDir>
     <ArtifactsDir>$(MSBuildThisFileDirectory).artifacts</ArtifactsDir>
     <IconPath>$(MSBuildThisFileDirectory)assets/icon.png</IconPath>
     <NetLegacy>false</NetLegacy>

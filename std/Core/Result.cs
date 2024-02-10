@@ -29,6 +29,9 @@ public class Result : IResult<ValueTuple, Error>
     public static implicit operator Result(Error error)
         => new(error);
 
+    public static implicit operator Result(Exception exception)
+        => new(Error.Convert(exception));
+
     public static implicit operator Result(ValueTuple value)
         => new();
 

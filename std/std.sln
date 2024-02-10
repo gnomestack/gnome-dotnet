@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Sys.Process", "Sys.Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Extensions.Secrets.Primitives", "Extensions.Secrets.Primitives\Gnome.Extensions.Secrets.Primitives.csproj", "{835005CE-E87E-4A41-9C03-DF0BCB72D1D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.IO.FileSystem", "IO.FileSystem\Gnome.IO.FileSystem.csproj", "{BFB26785-B28E-49A8-B614-3277548998B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{835005CE-E87E-4A41-9C03-DF0BCB72D1D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{835005CE-E87E-4A41-9C03-DF0BCB72D1D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{835005CE-E87E-4A41-9C03-DF0BCB72D1D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFB26785-B28E-49A8-B614-3277548998B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB26785-B28E-49A8-B614-3277548998B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB26785-B28E-49A8-B614-3277548998B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB26785-B28E-49A8-B614-3277548998B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

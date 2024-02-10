@@ -6,6 +6,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <RootNamespace>Gnome.Internal</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -27,6 +29,7 @@
 
   <ItemGroup>
    <PackageReference Include="Polyfill" />
+   <PackageReference Include="System.Memory" />
   </ItemGroup>
 
 </Project>
