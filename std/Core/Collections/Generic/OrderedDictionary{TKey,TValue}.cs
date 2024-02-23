@@ -2,7 +2,7 @@ using System.Collections;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
-namespace GnomeStack.Collections.Generic;
+namespace Gnome.Collections.Generic;
 
 /// <summary>
 /// The <see cref="OrderedDictionary{TKey,TValue}"/> allows hash based looks ups of values by a key.

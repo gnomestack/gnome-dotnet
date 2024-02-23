@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 
 // ReSharper disable once CheckNamespace
-namespace GnomeStack;
+namespace Gnome;
 
 internal static partial class Interop
 {

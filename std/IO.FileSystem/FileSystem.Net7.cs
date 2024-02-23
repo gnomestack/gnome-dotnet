@@ -14,7 +14,7 @@ public static partial class FileSystem
     {
         try
         {
-            if (OS.IsWindows())
+            if (Platform.IsWindows())
                 return new PlatformNotSupportedException("Changing file mode with unix mode is not supported on Windows.");
 
             File.SetUnixFileMode(fileHandle, mode);

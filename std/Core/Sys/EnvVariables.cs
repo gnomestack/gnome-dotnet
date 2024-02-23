@@ -10,6 +10,18 @@ public class EnvVariables : IEnvVariables
         set => this.Set(name, value);
     }
 
+    public string Expand(string value, EnvExpandOptions? options = null)
+        => EnvVariablesExpander.Expand(value, options);
+
+    public ReadOnlySpan<char> Expand(ReadOnlySpan<char> value, EnvExpandOptions? options = null)
+        => EnvVariablesExpander.Expand(value, options);
+
+    public Result<string> ExpandAsResult(string value, EnvExpandOptions? options = null)
+        => EnvVariablesExpander.ExpandAsResult(value, options);
+
+    public ValueResult<char[]> ExpandAsResult(ReadOnlySpan<char> value, EnvExpandOptions? options = null)
+        => EnvVariablesExpander.ExpandAsResult(value, options);
+
     public Option<string> Get(string name)
         => Option.From(System.Environment.GetEnvironmentVariable(name));
 

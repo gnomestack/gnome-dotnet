@@ -1,4 +1,4 @@
-namespace GnomeStack.Collections.Generic;
+namespace Gnome.Collections.Generic;
 
 public interface IOrderedDictionary<TKey, TValue> : IDictionary<TKey, TValue>
 {

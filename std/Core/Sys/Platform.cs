@@ -6,7 +6,7 @@ using os = System.OperatingSystem;
 namespace Gnome.Sys;
 
 #pragma warning disable S3400 // Methods should not return constants (false positive)
-public static partial class OS
+public static partial class Platform
 {
     private static readonly Lazy<EnvVariables> s_env = new(() => new EnvVariables());
 

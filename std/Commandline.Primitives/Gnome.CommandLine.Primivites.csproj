@@ -1,3 +1,4 @@
+<!--suppress MsbuildTargetFrameworkTagInspection -->
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -5,12 +6,13 @@
     <TargetFrameworks>$(StdFx)</TargetFrameworks>
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
-    <RootNamespace>Gnome.CommandLine.Primivites</RootNamespace>
+    <RootNamespace>Gnome.CommandLine</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <PropertyGroup>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageTags></PackageTags>
+    <PackageTags>Gnome CommandLine Primitives Ansi</PackageTags>
     <Description>
     Gnome.CommandLine.Primivites
     </Description>
@@ -27,6 +29,18 @@
 
   <ItemGroup>
    <PackageReference Include="Polyfill" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="../Color.Primitives/*.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="$(InternalDir)/Interop/Interop.cs" Link="Interop/Interop.cs" />
+    <Compile Include="$(InternalDir)/Interop/Unix/Libraries.cs" Link="Interop/Unix/Libraries.cs" />
+    <Compile Include="$(InternalDir)/Interop/Windows/Libraries.cs" Link="Interop/Windows/Libraries.cs" />
+    <Compile Include="$(InternalDir)/Interop/Windows/Kernel32/GetConsoleMode.cs" Link="Interop/Windows/Kernel32/GetConsoleMode.cs" />
+    <Compile Include="$(InternalDir)/Interop/Windows/Kernel32/GetStdHandle.cs" Link="Interop/Windows/Kernel32/GetStdHandle.cs" />
   </ItemGroup>
 
 </Project>

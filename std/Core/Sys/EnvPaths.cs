@@ -1,6 +1,6 @@
 using System.Collections;
 
-using static Gnome.Sys.OS;
+using static Gnome.Sys.Platform;
 
 namespace Gnome.Sys;
 

@@ -5,13 +5,13 @@
     <TargetFrameworks>$(StdFx)</TargetFrameworks>
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
-    <RootNamespace>Gnome.Core</RootNamespace>
+    <RootNamespace>Gnome</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <PropertyGroup>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageTags></PackageTags>
+    <PackageTags>Gnome</PackageTags>
     <Description>
     Gnome.Core
     </Description>
@@ -32,6 +32,19 @@
     <PackageReference Include="Microsoft.Bcl.HashCode" />
     <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" />
     <PackageReference Include="Polyfill" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="$(InternalDir)/Interop/Interop.cs" Link="Interop/Interop.cs" />
+    <Compile Include="$(InternalDir)/Interop/Unix/Libraries.cs" Link="Interop/Unix/Libraries.cs" />
+    <Compile Include="$(InternalDir)/Interop/Windows/Libraries.cs" Link="Interop/Windows/Libraries.cs" />
+    <Compile Include="$(InternalDir)/Interop/Windows/NtDll/RtlGetVersion.cs" Link="Interop/Windows/NtDll/RtlGetVersion.cs" />
+    <Compile Include="$(InternalDir)/Interop/Windows/Shell32/IsUserAnAdmin.cs" Link="Interop/Windows/Shell32/IsUserAnAdmin.cs" />
+    <Compile Include="$(InternalDir)/Interop/Windows/Kernel32/GetConsoleMode.cs" Link="Interop/Windows/Kernel32/GetConsoleMode.cs" />
+    <Compile Include="$(InternalDir)/Interop/Windows/Kernel32/GetStdHandle.cs" Link="Interop/Windows/Kernel32/GetStdHandle.cs" />
+    <Compile Include="$(InternalDir)/Interop/Unix/System.Native/ChMod.cs" Link="Interop/Unix/System.Native/ChMod.cs" />
+    <Compile Include="$(InternalDir)/Interop/Unix/System.Native/ChOwn.cs" Link="Interop/Unix/System.Native/ChOwn.cs" />
+    <Compile Include="$(InternalDir)/Interop/Unix/System.Native/GetEUid.cs" Link="Interop/Unix/System.Native/GetEUid.cs" />
   </ItemGroup>
 
 

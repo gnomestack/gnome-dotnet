@@ -14,7 +14,7 @@ public static partial class FileSystem
     {
         try
         {
-            if (OS.IsWindows())
+            if (Platform.IsWindows())
                 return new PlatformNotSupportedException("Setting file owner with unix ids is not supported on Windows.");
 
             Interop.Sys.ChOwn(path, owner, group);
@@ -67,7 +67,7 @@ public static partial class FileSystem
     {
         try
         {
-            if (OS.IsWindows())
+            if (Platform.IsWindows())
                 return new PlatformNotSupportedException("Getting file mode with unix mode is not supported on Windows.");
 
 #if NET7_0_OR_GREATER

@@ -17,4 +17,13 @@ public static class ArchitectureExtensions
         return false;
 #endif
     }
+
+    public static bool IsS390x(this Architecture arch)
+    {
+#if NET8_0_OR_GREATER
+        return arch == Architecture.S390x;
+#else
+        return false;
+#endif
+    }
 }
