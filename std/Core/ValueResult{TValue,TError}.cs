@@ -19,6 +19,9 @@ public readonly struct ValueResult<TValue, TError> : IResult<TValue, TError>
 
     public bool IsOk { get; }
 
+    public bool IsError
+        => !this.IsOk;
+
     public TValue Value
         => this.value ?? throw new InvalidOperationException("Result does not have a value.");
 

@@ -23,6 +23,9 @@ public class Result<TValue> : IResult<TValue, Error>
 
     public bool IsOk { get; private set; }
 
+    public bool IsError
+        => !this.IsOk;
+
     public TValue Value
         => this.value ?? throw new InvalidOperationException("Result does not have a value.");
 
@@ -70,6 +73,23 @@ public class Result<TValue> : IResult<TValue, Error>
         value = this.value!;
         error = this.error!;
         isOk = this.IsOk;
+    }
+
+    public TValue Expect()
+    {
+        if (this.IsOk)
+            return this.Value;
+
+        var ex = this.Error.ToException();
+        throw ex;
+    }
+
+    public TValue Expect(string message)
+    {
+        if (this.IsOk)
+            return this.Value;
+
+        throw new InvalidOperationException(message + this.Error.Message);
     }
 
     public Error GetErrorOrDefault(Error defaultError)

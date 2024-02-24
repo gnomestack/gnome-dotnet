@@ -26,6 +26,9 @@ public class Result : IResult<ValueTuple, Error>
 
     public bool IsOk { get; private set; }
 
+    public bool IsError
+        => !this.IsOk;
+
     public static implicit operator Result(Error error)
         => new(error);
 

@@ -50,7 +50,7 @@ public readonly struct ValueResult<TValue> : IResult<TValue, Error>
         => Task.FromResult(result);
 
     public static implicit operator ValueTask<ValueResult<TValue>>(ValueResult<TValue> result)
-        => result;
+        => new(result);
 
     public static ValueResult<TValue> Ok(TValue value)
         => new(value);
@@ -116,6 +116,23 @@ public readonly struct ValueResult<TValue> : IResult<TValue, Error>
         return this.IsOk ?
             EqualityComparer<TValue>.Default.Equals(this.Value, other.Value) :
             EqualityComparer<Error>.Default.Equals(this.Error, other.Error);
+    }
+
+    public TValue Expect()
+    {
+        if (this.IsOk)
+            return this.Value;
+
+        var ex = this.Error.ToException();
+        throw ex;
+    }
+
+    public TValue Expect(string message)
+    {
+        if (this.IsOk)
+            return this.Value;
+
+        throw new InvalidOperationException(message + this.Error.Message);
     }
 
     public ValueResult<TValue> Or(ValueResult<TValue> other)
