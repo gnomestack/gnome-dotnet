@@ -1,9 +1,39 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<!--suppress MsbuildTargetFrameworkTagInspection -->
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <StdFx Condition="$(StdFx) == ''">net8.0</StdFx>
+    <TargetFrameworks>$(StdFx)</TargetFrameworks>
     <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <RootNamespace>Gnome.Security.Cryptography</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags></PackageTags>
+    <Description>
+      Gnome.Sys.Process
+    </Description>
+    <PackageReleaseNotes Condition="Exists('$(MSBuildProjectDirectory)/CHANGELOG.md')">
+      $([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/CHANGELOG.md"))
+    </PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Condition="Exists('README.md')" Include="README.md" Pack="true" PackagePath="\"/>
+    <None Condition="Exists('LICENSE.md')" Include="LICENSE.md" Pack="true" PackagePath="\"/>
+    <None Condition="Exists('$(IconPath)')" Include="$(IconPath)" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Memory" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(NetLegacy)' == 'true'">
+    <Compile Include="$(InternalDir)/Polyfill/BitOperations.cs" Link="Polyfill/BitOperations.cs" />
+    <Compile Include="$(InternalDir)/Polyfill/IO.cs" Link="Polyfill/StreamExtensions.cs" />
+  </ItemGroup>
 
 </Project>

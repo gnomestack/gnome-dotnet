@@ -1,6 +1,6 @@
 using System.Buffers;
 
-namespace Gnome.Extensions.Secrets;
+namespace Gnome.Secrets;
 
 /// <summary>
 /// Represents a secret value that is stored in memory. It does not guarantee that
@@ -11,8 +11,6 @@ namespace Gnome.Extensions.Secrets;
 public sealed class Secret<T> : IDisposable
     where T : unmanaged
 {
-    private readonly int length;
-
     private readonly IMemoryOwner<T> owner;
 
     public Secret(ReadOnlySpan<T> value)
@@ -23,27 +21,27 @@ public sealed class Secret<T> : IDisposable
     internal Secret(ReadOnlySpan<T> value, bool encrypt)
     {
         // TODO: use chacha or something else for encrypting secrets.
-        this.length = value.Length;
-        this.owner = MemoryPool<T>.Shared.Rent(this.length);
+        this.Length = value.Length;
+        this.owner = MemoryPool<T>.Shared.Rent(this.Length);
         value.CopyTo(this.owner.Memory.Span);
     }
 
     public int Length { get; }
 
     public T[] Reveal()
-        => this.owner.Memory.Span[..this.length].ToArray();
+        => this.owner.Memory.Span[..this.Length].ToArray();
 
     public int RevealInto(Span<T> destination)
     {
-        var max = Math.Min(this.length, destination.Length);
+        var max = Math.Min(this.Length, destination.Length);
         this.owner.Memory.Span[..max].CopyTo(destination);
-        return this.length;
+        return this.Length;
     }
 
 #if !NETLEGACY
     public void Inspect<TState>(TState state, ReadOnlySpanAction<T, TState> action)
     {
-        var span = this.owner.Memory.Span[..this.length];
+        var span = this.owner.Memory.Span[..this.Length];
         action(span, state);
     }
 #endif

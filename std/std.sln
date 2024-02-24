@@ -9,15 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Colors.Primitives", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Internal", "Internal\Gnome.Internal.csproj", "{82C3D98E-8AC3-44C2-8369-D4AE2E5A1EDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.CommandLine.Primivites", "Commandline.Primitives\Gnome.CommandLine.Primivites.csproj", "{BDADF343-1B99-4655-BCB8-5DE871EB76DD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Sys.Process", "Sys.Process\Gnome.Sys.Process.csproj", "{6CD7E96A-9EAC-4CAB-8F73-2F53AB0DD7F4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Extensions.Secrets.Primitives", "Extensions.Secrets.Primitives\Gnome.Extensions.Secrets.Primitives.csproj", "{835005CE-E87E-4A41-9C03-DF0BCB72D1D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Sys.Shell", "Sys.Shell\Gnome.Sys.Shell.csproj", "{A2530CB6-166C-4EB9-817F-607F06FE5651}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Security.Cryptography", "Security.Cryptography\Gnome.Security.Cryptography.csproj", "{100707BA-239A-4F17-BF7E-DEAF7612CA3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Secrets", "Secrets\Gnome.Secrets.csproj", "{7B3F658D-AC61-4933-9BB5-579B92064902}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.CommandLine.Ansi", "CommandLine.Ansi\Gnome.CommandLine.Ansi.csproj", "{CC268EAA-C1ED-4037-928D-6CA47DA515AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,18 +40,10 @@ Global
 		{82C3D98E-8AC3-44C2-8369-D4AE2E5A1EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82C3D98E-8AC3-44C2-8369-D4AE2E5A1EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82C3D98E-8AC3-44C2-8369-D4AE2E5A1EDD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BDADF343-1B99-4655-BCB8-5DE871EB76DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BDADF343-1B99-4655-BCB8-5DE871EB76DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BDADF343-1B99-4655-BCB8-5DE871EB76DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BDADF343-1B99-4655-BCB8-5DE871EB76DD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6CD7E96A-9EAC-4CAB-8F73-2F53AB0DD7F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6CD7E96A-9EAC-4CAB-8F73-2F53AB0DD7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CD7E96A-9EAC-4CAB-8F73-2F53AB0DD7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CD7E96A-9EAC-4CAB-8F73-2F53AB0DD7F4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{835005CE-E87E-4A41-9C03-DF0BCB72D1D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{835005CE-E87E-4A41-9C03-DF0BCB72D1D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{835005CE-E87E-4A41-9C03-DF0BCB72D1D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{835005CE-E87E-4A41-9C03-DF0BCB72D1D0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A2530CB6-166C-4EB9-817F-607F06FE5651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A2530CB6-166C-4EB9-817F-607F06FE5651}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2530CB6-166C-4EB9-817F-607F06FE5651}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -60,5 +52,13 @@ Global
 		{100707BA-239A-4F17-BF7E-DEAF7612CA3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{100707BA-239A-4F17-BF7E-DEAF7612CA3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{100707BA-239A-4F17-BF7E-DEAF7612CA3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B3F658D-AC61-4933-9BB5-579B92064902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B3F658D-AC61-4933-9BB5-579B92064902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B3F658D-AC61-4933-9BB5-579B92064902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B3F658D-AC61-4933-9BB5-579B92064902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC268EAA-C1ED-4037-928D-6CA47DA515AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC268EAA-C1ED-4037-928D-6CA47DA515AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC268EAA-C1ED-4037-928D-6CA47DA515AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC268EAA-C1ED-4037-928D-6CA47DA515AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

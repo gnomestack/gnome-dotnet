@@ -1,4 +1,4 @@
-namespace Gnome.Extensions.Secrets;
+namespace Gnome.Secrets;
 
 public static class Secret
 {
